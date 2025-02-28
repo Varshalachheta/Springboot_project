@@ -14,13 +14,13 @@ public class MyController {
 
    private StudentRepository studentRepository;
 
-    @PostMapping("/")
+    @PostMapping("/save")
     public ResponseEntity<?> addStudent(@RequestBody Student student)
     {
        Student save =  this.studentRepository.save(student);
        return ResponseEntity.ok(save);
     }
-    @GetMapping("/")
+    @GetMapping("/display")
     public ResponseEntity<?> getStudent()
     {
 
